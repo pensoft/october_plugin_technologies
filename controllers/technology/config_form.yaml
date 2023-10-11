@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Technology
+
+# Model Form Field configuration
+form: $/pensoft/technologies/models/technology/fields.yaml
+
+# Model Class name
+modelClass: Pensoft\Technologies\Models\Technology
+
+# Default redirect location
+defaultRedirect: pensoft/technologies/technology
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: pensoft/technologies/technology/update/:id
+    redirectClose: pensoft/technologies/technology
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: pensoft/technologies/technology
+    redirectClose: pensoft/technologies/technology
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

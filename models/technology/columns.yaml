@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        type: number
+    title:
+        label: Title
+        type: text
+    tag:
+        label: Tag
+        type: text

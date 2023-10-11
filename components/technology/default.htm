@@ -1,0 +1,60 @@
+{% if records %}
+<div class="container technology-content">
+    <!-- Main Header -->
+    <div class="mt-5">
+        <h1 class="technology-header-main">{{ records.tag }} - {{ records.title }}</h1>
+        <h2 class="technology-header-sub">{{records.subhead}}</h2>
+    </div>
+
+    <!-- Content with Cover Photo -->
+    <div class="row mt-5">
+        {{ records.content|raw }}
+    </div>
+
+    <!-- Target Stakeholders -->
+    {% if records.target_stakeholders %}
+    <div class="mt-5">
+        <h2 class="technology-header-secondary">Target Stakeholders</h2>
+        <div class="col-xs-12">
+            {{records.target_stakeholders|raw}}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Contacts from Profiles -->
+    {% if records.profiles.count > 0 %}
+    <div class="mt-5">
+        <h2 class="technology-header-secondary" style="display: inline-block;">Contact / Technology lead:</h2>
+        <span class="contact-info">
+            {% for profile in records.profiles %}
+                {{ profile.names }} 
+                {% if profile.email %}
+                    (<a href="mailto:{{ profile.email }}">{{ profile.email }}</a>)
+                {% endif %}
+                {% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </span>
+    </div>
+    {% endif %}
+
+
+    <!-- Partners -->
+    {% if records.partners.count > 0 %}
+    <div class="technology-partners mt-5">
+        <h2 class="technology-header-secondary">Partners involved</h2>
+        <div class="row">
+            {% for partner in records.partners %}
+                <div class="col-md-2 col-xs-12 partner-col">
+                    <a href="{{ partner.instituion_url }}" target="_blank">
+                        <img src="{{ partner.cover.path }}" alt="Partner Cover" class="img-responsive partner-img">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
+    {% endif %}
+</div>
+
+{% else %}
+    <p>No record found with this slug.</p>
+{% endif %}

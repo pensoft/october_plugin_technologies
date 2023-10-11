@@ -1,0 +1,13 @@
+1.0.1: First version of Technologies
+1.0.2:
+  - 'Created table pensoft_technologies_technologies'
+  - create_technologies_table.php
+1.0.3:
+  - 'Created table pensoft_technologies_partner_technology'
+  - create_partner_technology_table.php
+1.0.4:
+  - 'Created table pensoft_technologies_technology_profiles'
+  - create_contact_technology_table.php
+1.0.5:
+  - 'Updated table pensoft_technologies_technologies'
+  - update_technologies_table.php
