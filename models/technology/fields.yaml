@@ -8,21 +8,21 @@ fields:
         type: text
         required: true
         span: left
-    tag:
-        label: Tag
-        type: text
-        required: true
-        span: right
+    # tag:
+    #     label: Tag
+    #     type: text
+    #     required: true
+    #     span: right
     subhead:
         label: Subhead
         type: text
-        required: false
-        span: left
+        required: true
+        span: right
     cover_photo:
         label: Cover Photo
         type: fileupload
         required: true
-        span: right
+        span: left
     content:
         label: Main Content
         type: richeditor

@@ -11,3 +11,5 @@
 1.0.5:
   - 'Updated table pensoft_technologies_technologies'
   - update_technologies_table.php
+1.0.6:
+  - 'Fixes'
